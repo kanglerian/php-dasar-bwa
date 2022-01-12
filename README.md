@@ -190,3 +190,130 @@ Looping dengan syarat kondisinya true
     } while($a <= 10);
 ?>
 ```
+
+### For
+
+```php
+<?php
+    for($i=0; $i < 10; $i++>){
+        echo "Ini adalah nomor " . $i . "<br/>";
+    }
+?>
+```
+
+### Foreach
+
+```php
+<?php
+    $buah = ["Anggur", "Apel", "Jeruk", "Buah Naga"];
+	foreach ($buah as $value) {
+		echo $value . "<br/>";
+	}
+?>
+```
+
+```php
+<?php
+    $buah = ["Anggur", "Apel", "Jeruk", "Buah Naga"];
+	foreach ($buah as $key => $value) {
+		echo $value . " dengan key " . $key . "<br/>";
+	}
+?>
+```
+
+## Lebih Lanjut
+
+### Function
+
+```php
+<?php
+    function halo($nama){
+		echo "Hallooo.. $nama";
+	}
+	halo("Lerian");
+?>
+```
+
+```php
+<?php
+    function tambah($a, $b){
+		$total = $a + $b;
+		echo $total;
+	}
+
+	tambah(1,2);
+?>
+```
+
+Jika kosong.
+
+```php
+<?php
+    function halo($nama = null){
+		echo "Hallooo.." . "<br/>";
+	}
+	halo();
+?>
+```
+
+Jika ingin pakai default.
+```php
+<?php
+    function halo($nama = 'Tanpa nama'){
+		echo "Hallooo.." . "<br/>";
+	}
+	halo();
+?>
+```
+
+
+### Array
+
+**Indexed Array**
+```php
+<?php
+    $a = ['BMW', 'Honda', 'Suzuki'];
+    var_dump($a);
+    echo $a[2];
+?>
+```
+
+**Associative Array**
+```php
+<?php
+    $b = [
+        'Indonesia' => 'Nasi padang',
+        'Malaysia' => 'Nasi lemak',
+        'Amerika' => 'Steak',
+    ];
+    var_dump($b);
+    echo $b['Indonesia'];
+?>
+```
+
+**Multidimensional Array**
+
+```php
+<?php
+    $c = [
+        'a' => ['BMW', 'Honda', 'Suzuki'],
+        'b' => [
+            'Indonesia' => 'Nasi padang',
+            'Malaysia' => 'Nasi lemak',
+            'Amerika' => 'Steak',
+        ],
+    ];
+    var_dump($c);
+    echo $c['a'][1];
+?>
+```
+
+```php
+<?php
+    $c = [
+        'a' => $a,
+        'b' => $b
+    ];
+    var_dump($c);
+?>
+```
